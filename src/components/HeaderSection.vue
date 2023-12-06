@@ -1,29 +1,29 @@
 <template>
   <div class="header">
-    <div class="grid wide">
+    <div class="container-xxl">
       <nav class="header__navbar hide-on-mobile-tablet">
         <ul class="header__navbar-list">
           <li class="header__navbar-item">
             <a class="header__navbar-item-link">
-              <i class="header__navbar-icon fa-solid fa-location-dot"></i>
+              <font-awesome-icon class="header__navbar-icon" icon="fa-solid fa-location-dot"/>
               Minh Khai, Bắc Từ Liêm, Hà Nội
             </a>
           </li>
           <li class="header__navbar-item">
             <a href="tel:0188889999" class="header__navbar-item-link">
-              <i class="header__navbar-icon fa-solid fa-phone"></i>
+              <font-awesome-icon class="header__navbar-icon" icon="fa-solid fa-phone"/>
               0772 888 999
             </a>
           </li>
           <li class="header__navbar-item">
             <a class="header__navbar-item-link">
-              <i class="header__navbar-icon fa-brands fa-square-facebook"></i>
+              <font-awesome-icon class="header__navbar-icon" icon="fa-brands fa-square-facebook"/>
             </a>
             <a class="header__navbar-item-link">
-              <i class="header__navbar-icon fa-brands fa-instagram"></i>
+              <font-awesome-icon class="header__navbar-icon" icon="fa-brands fa-instagram"/>
             </a>
             <a class="header__navbar-item-link">
-              <i class="header__navbar-icon fa-brands fa-youtube"></i>
+              <font-awesome-icon class="header__navbar-icon" icon="fa-brands fa-youtube"/>
             </a>
           </li>
         </ul>
@@ -45,30 +45,30 @@
       <!-- Header main -->
       <div class="header__main">
         <a class="header__main-img-link">
-          <RouterLink to="/">
+          <RouterLink to="/" class="router-link">
             <img src="../assets/img/logo.png" alt="Logo Mona" class="header__main-img"/>
           </RouterLink>
         </a>
         <div class="header__main-search hide-on-mobile-tablet">
           <input type="text" class="header__main-search-box" placeholder="Tìm kiếm..." />
           <button class="header__main-search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass"/>
           </button>
         </div>
         <ul class="header__main-list">
           <li class="header__main-option hide-on-mobile-tablet">
             <a class="header__main-option-link">
-              <i class="header__main-icon fa-solid fa-heart"></i>
+              <font-awesome-icon class="header__main-icon" icon="fa-solid fa-heart"/>
             </a>
           </li>
           <li class="header__main-option">
             <a class="header__main-option-link">
-              <i class="header__main-icon fa-solid fa-bag-shopping"></i>
+              <font-awesome-icon class="header__main-icon" icon="fa-solid fa-bag-shopping"/>
             </a>
           </li>
           <li class="header__main-option hide-on-mobile-tablet">
             <a class="header__main-option-link">
-              <i class="header__main-icon fa-solid fa-user"></i>
+              <font-awesome-icon class="header__main-icon" icon="fa-solid fa-user"/>
             </a>
           </li>
         </ul>
@@ -77,15 +77,15 @@
 
     <!-- Header menu -->
     <div class="header__menu_wrap hide-on-mobile-tablet">
-      <div class="grid wide">
+      <div class="container-xxl">
         <div class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
               <a class="header__menu-item-link"> Trang chủ </a>
             </li>
             <li class="header__menu-item">
-              <RouterLink to="/about">
-                <a  class="header__menu-item-link"> Giới thiệu </a>
+              <RouterLink to="/about" class="router-link">
+                <a class="header__menu-item-link"> Giới thiệu </a>
               </RouterLink>
             </li>
             <li class="header__menu-item">
@@ -152,7 +152,7 @@ window.onscroll = function () {
 .header__navbar-item,
 .header__navbar-item-link {
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: var(--white-color);
   text-decoration: none;
   font-weight: 400;
@@ -172,13 +172,13 @@ window.onscroll = function () {
   display: block;
   position: absolute;
   border-left: 1px solid #888;
-  height: 16px;
-  top: 0;
+  height: 18px;
+  top: 5px;
   right: -10px;
 }
 
 .header__navbar-icon {
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--white-color);
   text-decoration: none;
   margin: 0 4px;
@@ -209,7 +209,7 @@ window.onscroll = function () {
   width: 100%;
   height: 100%;
   padding: 10px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-style: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -225,7 +225,7 @@ window.onscroll = function () {
   width: 60px;
   height: 100%;
   padding: 10px;
-  font-size: 1.8rem;
+  font-size: 1rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   cursor: pointer;
@@ -247,7 +247,7 @@ window.onscroll = function () {
 }
 
 .header__main-icon {
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: var(--white-color);
   margin: 0 16px;
 }
@@ -280,7 +280,7 @@ window.onscroll = function () {
 .header__menu-item-link {
   text-decoration: none;
   color: var(--white-color);
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   padding: 4px;

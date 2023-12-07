@@ -1,7 +1,18 @@
 @import './base.css';
 
+@keyframes scaleOut {
+  from {
+    height: 40px;
+    opacity: 0.3;
+  }
+  to {
+    height: 60px;
+    opacity: 1;
+  }
+}
+
 #app {
-    background-color: #f5f5f5;
+    background-color: var(--color-background-mute);
 }
 
 .router-link {

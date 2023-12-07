@@ -14,15 +14,15 @@
   --divider-dark-1: rgba(84, 84, 84, 0.65);
   --divider-dark-2: rgba(84, 84, 84, 0.48);
 
-  --text-light-1: var(--indigo);
-  --text-light-2: rgba(60, 60, 60, 0.66);
-  --text-dark-1: var(--white);
-  --text-dark-2: rgba(235, 235, 235, 0.64);
+  --text-light-1: var(--white);
+  --text-light-2: rgba(235, 235, 235, 0.64);
+  --text-dark-1: rgba(60, 60, 60, 0.66);
+  --text-dark-2: var(--indigo);
 
-  --white-color: #fff;
-  --black-color: #000;
-  --text-color: #333;
   --primary-color: #c89979;
+  --primary-dark-color: #c58c66;
+
+  --blue-light: lightblue;
 }
 
 /* semantic color variables for this project */

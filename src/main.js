@@ -22,7 +22,8 @@ import {
   faHeart,
   faBagShopping,
   faUser,
-  faAngleUp
+  faAngleUp,
+  faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faSquareFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -38,7 +39,8 @@ library.add(
   faHeart,
   faBagShopping,
   faUser,
-  faAngleUp
+  faAngleUp,
+  faEnvelope
 )
 
 const app = createApp(App)

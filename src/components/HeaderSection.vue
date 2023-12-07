@@ -121,8 +121,8 @@ window.onscroll = function () {
 
 <style lang="css" scoped>
 .header {
-  /* background-image: linear-gradient(0, #3e3e3e, var(--text-color)); */
-  background-color: var(--text-color);
+  /* background-image: linear-gradient(0, #3e3e3e, var(--black-mute)); */
+  background-color: var(--black-mute);
 }
 
 .fixed-header {
@@ -153,7 +153,7 @@ window.onscroll = function () {
 .header__navbar-item-link {
   display: inline-block;
   font-size: 1rem;
-  color: var(--white-color);
+  color: var(--text-light-1);
   text-decoration: none;
   font-weight: 400;
 }
@@ -179,7 +179,7 @@ window.onscroll = function () {
 
 .header__navbar-icon {
   font-size: 1rem;
-  color: var(--white-color);
+  color: var(--white);
   text-decoration: none;
   margin: 0 4px;
 }
@@ -227,7 +227,7 @@ window.onscroll = function () {
   padding: 10px;
   font-size: 1rem;
   background-color: var(--primary-color);
-  color: var(--white-color);
+  color: var(--white);
   cursor: pointer;
   border-style: none;
   border-top-right-radius: 5px;
@@ -248,13 +248,13 @@ window.onscroll = function () {
 
 .header__main-icon {
   font-size: 2rem;
-  color: var(--white-color);
+  color: var(--white);
   margin: 0 16px;
 }
 
 /* Header menu */
 .header__menu_wrap {
-  background-color: var(--text-color);
+  background-color: var(--black-mute);
 }
 
 .header__menu {
@@ -279,7 +279,7 @@ window.onscroll = function () {
 
 .header__menu-item-link {
   text-decoration: none;
-  color: var(--white-color);
+  color: var(--text-light-1);
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;

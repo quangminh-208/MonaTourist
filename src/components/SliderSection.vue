@@ -152,7 +152,7 @@ export default {
 .slider__item__content {
   width: 100%;
   height: 100%;
-  color: var(--white-color);
+  color: var(--text-light-1);
   position: absolute;
   top: 0;
   transition: all 0.8s ease;

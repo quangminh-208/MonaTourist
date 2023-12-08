@@ -93,14 +93,19 @@ export default {
 </script>
 
 <template>
-  <div class="row justify-content-evenly g-5">
-    <ProductItem
-      v-for="(product, index) in products"
-      :key="index"
-      :imgProductUrl="`./src/assets/img/product-${product.id}.png`"
-      :product="product"
-    />
+  <div class="product-wrapper">
+    <div class="row g-5">
+      <ProductItem
+        v-for="(product, index) in products"
+        :key="index"
+        :imgProductUrl="`./src/assets/img/product-${product.id}.png`"
+        :product="product"
+      />
+    </div>
   </div>
 </template>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.product-wrapper {
+}
+</style>

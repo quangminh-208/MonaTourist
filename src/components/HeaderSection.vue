@@ -77,11 +77,13 @@
 
     <!-- Header menu -->
     <div class="header__menu_wrap hide-on-mobile-tablet">
-      <div class="container-xxl">
+      <div class="container-xl">
         <div class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-item-link"> Trang chủ </a>
+              <RouterLink to="/" class="router-link">
+                <a class="header__menu-item-link"> Trang chủ </a>
+              </RouterLink>
             </li>
             <li class="header__menu-item">
               <RouterLink to="/about" class="router-link">
@@ -174,7 +176,7 @@ window.onscroll = function () {
   border-left: 1px solid #888;
   height: 18px;
   top: 5px;
-  right: -10px;
+  right: -9px;
 }
 
 .header__navbar-icon {
@@ -240,10 +242,18 @@ window.onscroll = function () {
 
 .header__main-list {
   list-style: none;
+  margin: 0;
 }
 
 .header__main-option {
   display: inline-block;
+}
+
+.header__main-option-link {
+  cursor: pointer;
+}
+.header__main-option-link:hover .header__main-icon {
+  color: var(--primary-color);
 }
 
 .header__main-icon {

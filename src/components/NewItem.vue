@@ -11,8 +11,7 @@ export default {
         return {}
       }
     }
-  },
-  methods: {}
+  }
 }
 </script>
 <template>
@@ -50,6 +49,7 @@ export default {
 .news__link {
   text-decoration: none;
   color: var(--black-text);
+  cursor: pointer;
 }
 
 .news__item__img {

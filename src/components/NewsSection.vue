@@ -37,11 +37,6 @@ export default {
         ]
       }
     }
-  },
-  methods: {
-    a() {
-      console.log('🚀 ~ file: NewsSection.vue:37 ~ newsList:', this.newsList)
-    }
   }
 }
 </script>

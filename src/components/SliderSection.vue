@@ -1,57 +1,83 @@
+<script>
+import SlideItem from './SlideItem.vue'
+
+export default {
+  components: {
+    SlideItem
+  },
+  props: {
+    slideList: {
+      type: Array,
+      default: function () {
+        return [
+          {
+            id: 1,
+            subheading: 'Mona Watch',
+            heading: 'Đồng hồ Classico',
+            content:
+              'Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ…'
+          },
+          {
+            id: 2,
+            subheading: 'Mona Watch',
+            heading: 'Đồng hồ Classico',
+            content:
+              'Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ…'
+          },
+          {
+            id: 3,
+            subheading: 'Mona Watch',
+            heading: 'Đồng hồ Classico',
+            content:
+              'Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ…'
+          }
+        ]
+      }
+    }
+  },
+  data() {
+    return {
+      slide_index: 2,
+      slideChecked: 1
+    }
+  },
+  mounted() {
+    // Create an interval that executes the 'autoSlide' function every 4 seconds
+    this.$refs.slideRef[0].onAddClass()
+    this.intervalId = setInterval(this.nextSlide, 4000)
+  },
+  beforeUnmount() {
+    // Clear the interval when the component is destroyed
+    clearInterval(this.intervalId)
+  },
+  methods: {
+    backSlide() {
+      this.slideChecked = this.slide_index
+      this.slide_index--
+      if (this.slide_index < 1) this.slide_index = 3
+    },
+    nextSlide() {
+      this.slideChecked = this.slide_index
+      this.slide_index++
+      if (this.slide_index > 3) this.slide_index = 1
+    }
+  }
+}
+</script>
+
 <template>
   <div class="slider-wrapper">
     <div class="slider__main">
       <input type="radio" name="slider-radio-btn" id="radio1" :checked="slideChecked === 1" />
       <input type="radio" name="slider-radio-btn" id="radio2" :checked="slideChecked === 2" />
       <input type="radio" name="slider-radio-btn" id="radio3" :checked="slideChecked === 3" />
-      <div class="slider__item first-slide">
-        <a>
-          <img src="../assets/img/slide-1.jpg" class="slider__item-img" />
-        </a>
-        <div class="container-xxl">
-          <div class="slider__item__content">
-            <p class="slider__item__subheading">Mona Watch</p>
-            <p class="slider__item__heading">Đồng hồ Classico</p>
-            <p class="slider__item__text">
-              Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho
-              ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc,
-              kích cỡ…
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="slider__item">
-        <a>
-          <img src="../assets/img/slide-2.jpg" class="slider__item-img" />
-        </a>
-        <div class="container-xxl">
-          <div class="slider__item__content">
-            <p class="slider__item__subheading">Mona Watch</p>
-            <p class="slider__item__heading">Đồng hồ Classico</p>
-            <p class="slider__item__text">
-              Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho
-              ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc,
-              kích cỡ…
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="slider__item">
-        <a>
-          <img src="../assets/img/slide-3.jpg" class="slider__item-img" />
-        </a>
-        <div class="container-xxl">
-          <div class="slider__item__content">
-            <p class="slider__item__subheading">Mona Watch</p>
-            <p class="slider__item__heading">Đồng hồ Classico</p>
-            <p class="slider__item__text">
-              Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho
-              ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc,
-              kích cỡ…
-            </p>
-          </div>
-        </div>
-      </div>
+      <SlideItem
+        ref="slideRef"
+        v-for="(slide, index) in this.slideList"
+        :key="index"
+        :imgSlideUrl="`./src/assets/img/slide-${slide.id}.jpg`"
+        :slide="slide"
+      />
       <div class="slider__nav-auto">
         <div class="slider__nav-auto__btn slider__nav-auto__btn1"></div>
         <div class="slider__nav-auto__btn slider__nav-auto__btn2"></div>
@@ -76,43 +102,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {},
-  data() {
-    return {
-      slide_index: 2,
-      slideChecked: 1
-    }
-  },
-  mounted() {
-    // Create an interval that executes the 'autoSlide' function every 4 seconds
-    this.intervalId = setInterval(this.nextSlide, 4000)
-  },
-  beforeUnmount() {
-    // Clear the interval when the component is destroyed
-    clearInterval(this.intervalId)
-  },
-  methods: {
-    backSlide() {
-      this.slideChecked = this.slide_index
-      this.slide_index--
-      if (this.slide_index < 1) this.slide_index = 3
-    },
-    nextSlide() {
-      this.slideChecked = this.slide_index
-      this.slide_index++
-      if (this.slide_index > 3) this.slide_index = 1
-    }
-  }
-}
-</script>
-
 <style lang="css" scoped>
 .slider-wrapper {
-  background-color: #222;
+  background-color: var(--black--soft);
   width: 100%;
-  aspect-ratio: 19 / 6;
+  aspect-ratio: 19 / 6.4;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -138,52 +132,6 @@ export default {
   width: 100%;
   display: flex;
 }
-
-.slider__item {
-  width: 100%;
-  position: relative;
-  transition: all 0.5s ease;
-}
-
-.slider__item-img {
-  width: 100vw;
-}
-
-.slider__item__content {
-  width: 100%;
-  height: 100%;
-  color: var(--text-light-1);
-  position: absolute;
-  top: 0;
-  transition: all 0.8s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.slider__item__subheading {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.slider__item__heading {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.slider__item__text {
-  width: 40%;
-  font-size: 1.2rem;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-
 .slider__btn-wrapper {
   height: 100%;
   position: absolute;
@@ -215,18 +163,6 @@ export default {
 .slider__btn:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
-}
-
-.slider__btn i {
-  font-size: 2.2rem;
-}
-
-.slider__btn-left i {
-  margin-right: 3px;
-}
-
-.slider__btn-right i {
-  margin-left: 3px;
 }
 
 .slider__btn-left {
@@ -272,7 +208,7 @@ export default {
   height: 16px;
   border-radius: 50%;
   border: 2px solid var(--primary-color);
-  background-color: #c899794f;
+  background-color: var(--primary-dark-color);
   opacity: 0.6;
   cursor: pointer;
   transition: all 0.5s ease;

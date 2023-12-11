@@ -12,7 +12,7 @@
           <li class="header__navbar-item">
             <a href="tel:0188889999" class="header__navbar-item-link">
               <font-awesome-icon class="header__navbar-icon" icon="fa-solid fa-phone"/>
-              0772 888 999
+            1900 1900
             </a>
           </li>
           <li class="header__navbar-item">
@@ -86,21 +86,21 @@
               </RouterLink>
             </li>
             <li class="header__menu-item">
-              <RouterLink to="/about" class="router-link">
-                <a class="header__menu-item-link"> Giới thiệu </a>
-              </RouterLink>
+              <a class="header__menu-item-link"> Tour trong nước </a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-item-link"> Đồng hồ nam </a>
+              <a class="header__menu-item-link"> Tour nước ngoài </a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-item-link"> Đồng hồ nữ </a>
-            </li>
-            <li class="header__menu-item">
-              <a class="header__menu-item-link"> Đồng hồ trẻ em </a>
+              <a class="header__menu-item-link"> Dịch vụ du lịch </a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-item-link"> Blog </a>
+            </li>
+            <li class="header__menu-item">
+              <RouterLink to="/about" class="router-link">
+                <a class="header__menu-item-link"> Giới thiệu </a>
+              </RouterLink>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-item-link"> Liên hệ </a>
@@ -195,7 +195,7 @@ window.onscroll = function () {
 }
 
 .header__main-img {
-  width: 200px;
+  width: 300px;
 }
 
 .header__main-search {
@@ -237,7 +237,7 @@ window.onscroll = function () {
 }
 
 .header__main-search-btn:hover {
-  background-color: #b98d70;
+  background-color: var(--primary-dark-color);
 }
 
 .header__main-list {

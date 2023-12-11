@@ -260,7 +260,7 @@ export default {
 
 .slider__nav-auto__btn:hover {
   background-color: var(--primary-color);
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .slider__nav-auto__btn:not(:last-child) {

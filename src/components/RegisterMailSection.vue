@@ -31,11 +31,13 @@
 }
 
 .r-register__form {
+  width: 30%;
   display: flex;
 }
 
 .r-email__form__input {
   width: 80%;
+  /* width: 80%; */
   padding: 10px;
   font-size: 1.2rem;
   border: none;
@@ -49,12 +51,12 @@
 }
 
 .r-email__form__submit {
-  width: 35%;
+  width: 25%;
   border: none;
   font-size: 1rem;
   font-weight: 500;
   background-color: var(--primary-color);
-  color: var(--white-color);
+  color: var(--white);
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
   cursor: pointer;

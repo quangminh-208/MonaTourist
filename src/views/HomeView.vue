@@ -25,7 +25,7 @@ import FooterSection from '../components/FooterSection.vue'
         </button>
       </div>
     </div>
-    <ProductList :number0fProduct="4" />
+    <ProductList :number0fProduct="5" />
     <ProductBox />
     <ProductOptionSection />
     <NewsSection />

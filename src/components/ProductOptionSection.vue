@@ -14,9 +14,6 @@ export default {
 </script>
 <template>
   <div class="p-option__wrapper">
-    <!-- <input type="radio" name="po-btn" id="p-option__input1" checked />
-      <input type="radio" name="po-btn" id="p-option__input2" />
-      <input type="radio" name="po-btn" id="p-option__input3" /> -->
     <div class="p-option__head">
       <button class="p-option__head__btn" @click="productOption = 'popularity'">
         Sản phẩm phổ biến
@@ -26,8 +23,8 @@ export default {
       </button>
       <button class="p-option__head__btn" @click="productOption = 'new'">Sản phẩm mới</button>
     </div>
-    <ProductList :number0fProduct="4" v-if="productOption === 'popularity'" />
-    <ProductList :number0fProduct="6" v-if="productOption === 'sale'" />
+    <ProductList :number0fProduct="5" v-if="productOption === 'popularity'" />
+    <ProductList :number0fProduct="7" v-if="productOption === 'sale'" />
     <ProductList :number0fProduct="8" v-if="productOption === 'new'" />
   </div>
 </template>
@@ -43,6 +40,7 @@ export default {
 
 .p-option__head__btn {
   border: none;
+  background: none;
   font-size: 2rem;
   font-weight: 500;
   margin-right: 36px;

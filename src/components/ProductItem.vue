@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-3">
+  <div class="col">
     <div class="product">
       <div class="product__img-wrapper">
         <a class="product__link">
@@ -156,7 +156,7 @@ export default {
 }
 
 .product__btn {
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: bold;
   padding: 8px 12px;
   border: none;
@@ -166,6 +166,6 @@ export default {
   cursor: pointer;
 }
 .product__btn:hover {
-  background-color: #c78e68;
+  background-color: var(--primary-dark-color);
 }
 </style>
